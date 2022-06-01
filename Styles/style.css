@@ -351,25 +351,26 @@ img[alt="Joaquin's Picture"] {
 		padding-bottom: 1rem;
 	}
 	.image-container {
-		width: 120px;
-		height: 120px;
 		top: 0;
 	}
 	footer {
 		margin: 0;
 	}
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 500px) {
 	.image-container {
-		width: 100px;
-		height: 100px;
 		right: 23%;
-		top: 2.2%;
 	}
 	.background-container {
 		min-width: 390px;
 	}
 	html {
-		font-size: 15px;
+		font-size: 16px;
 	}
 }
+@media screen and (max-width: 450px) {
+	.image-container {
+		width: 120px;
+		height: 120px;
+	}
+} ;
