@@ -1,5 +1,6 @@
 const animated = document.querySelectorAll('[data-animated]')
-
+document.onload = document.querySelector('.mask').style.opacity = '0%'
+document.onload = document.querySelector('main').style.opacity = '100%'
 animated.forEach(e => {
     e.addEventListener('mouseleave', async () => {
         const lines = e.children[0].children
@@ -11,5 +12,18 @@ animated.forEach(e => {
         for (const line of lines) {
             line.style.transitionDelay = ''
         }
+    })
+})
+
+const links = document.querySelectorAll('a')
+links.forEach(e => {
+    e.addEventListener('click', async (event) => {
+        const href = event.target.closest('a').href
+        if (href.includes('#')) return false;
+        event.preventDefault()
+        document.querySelector('.mask').style.opacity = '100%'
+        document.querySelector('main').style.opacity = '0%'
+        await new Promise(r => setTimeout(r, 500));
+        window.location = href
     })
 })
