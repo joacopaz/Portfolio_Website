@@ -25,5 +25,7 @@ links.forEach(e => {
         document.querySelector('main').style.opacity = '0%'
         await new Promise(r => setTimeout(r, 500));
         window.location = href
+        await new Promise(r => setTimeout(r, 100));
+        document.querySelector('[data-video]').play()
     })
 })
