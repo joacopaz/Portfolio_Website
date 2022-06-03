@@ -1,3 +1,26 @@
+const storedWidth = sessionStorage.getItem('containerWidth')
+const storedHeight = sessionStorage.getItem('containerHeight')
+const main = document.querySelector('main')
+const container = document.querySelector('.background-container')
+
+console.log(`Storage is: ${storedWidth} and ${storedHeight}`)
+
+window.onload = async () => {
+    document.querySelector('[data-video]').play()
+    if (main.offsetWidth < storedWidth) {
+        main.style.minWidth = storedWidth + 'px'
+        await new Promise(r => setTimeout(r, 600));
+        main.style.minWidth = ''
+        await new Promise(r => setTimeout(r, 600));
+    }
+    if (main.offsetWidth > storedWidth) {
+        main.style.maxWidth = storedWidth + 'px'
+        await new Promise(r => setTimeout(r, 600));
+        main.style.maxWidth = ''
+        await new Promise(r => setTimeout(r, 600));
+    }
+}
+
 const animated = document.querySelectorAll('[data-animated]')
 document.onload = document.querySelector('.mask').style.opacity = '0%'
 document.onload = document.querySelector('main').style.opacity = '100%'
@@ -22,10 +45,10 @@ links.forEach(e => {
         if (href.includes('#')) return false;
         event.preventDefault()
         document.querySelector('.mask').style.opacity = '100%'
-        document.querySelector('main').style.opacity = '0%'
+        sessionStorage.setItem('containerHeight', container.offsetHeight)
+        sessionStorage.setItem('containerWidth', container.offsetWidth)
+        main.style.opacity = '0%'
         await new Promise(r => setTimeout(r, 500));
         window.location = href
-        await new Promise(r => setTimeout(r, 100));
-        document.querySelector('[data-video]').play()
     })
 })
