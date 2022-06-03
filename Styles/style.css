@@ -43,9 +43,7 @@ body {
 }
 .background-container {
 	bottom: 1rem;
-	max-width: 1000px;
 	position: relative;
-	min-width: 0px;
 }
 .background {
 	background-color: #2d2d2cde;
@@ -201,13 +199,12 @@ nav {
 /* Main */
 
 main {
-	margin: 4rem auto;
+	margin: 2rem auto;
 	position: relative;
-	padding-bottom: 4rem;
+	padding-bottom: 2rem;
 	cursor: default;
 	opacity: 0%;
 	transition: opacity 500ms;
-	min-width: 0px;
 	max-width: 1000px;
 }
 main h2,
@@ -259,6 +256,7 @@ img[alt="Joaquin's Picture"] {
 	transition: color 100ms;
 	position: relative;
 	text-decoration: underline;
+	padding: 0.5rem 0rem;
 }
 .main-link:hover {
 	color: #f1a708;

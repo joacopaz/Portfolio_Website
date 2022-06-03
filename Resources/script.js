@@ -1,14 +1,13 @@
 const main = document.querySelector('main')
 const container = document.querySelector('.background-container')
-const background = document.querySelector('.background')
 
 window.onload = async () => {
     document.querySelector('[data-video]').play()
+    document.onload = document.querySelector('.mask').style.opacity = '0%'
+    document.onload = document.querySelector('main').style.opacity = '100%'
 }
 
 const animated = document.querySelectorAll('[data-animated]')
-document.onload = document.querySelector('.mask').style.opacity = '0%'
-document.onload = document.querySelector('main').style.opacity = '100%'
 animated.forEach(e => {
     e.addEventListener('mouseleave', async () => {
         const lines = e.children[0].children
@@ -28,10 +27,12 @@ links.forEach(e => {
     e.addEventListener('click', async (event) => {
         const href = event.target.closest('a').href
         if (href.includes('#')) return false;
+        if (href.target.includes('_blank')) {
+            window.open(href, '_blank');
+        };
         event.preventDefault()
         document.querySelector('.mask').style.opacity = '100%'
         main.style.opacity = '0%'
-        await new Promise(r => setTimeout(r, 500));
         window.location = href
     })
 })
