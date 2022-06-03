@@ -2,23 +2,40 @@ const storedWidth = sessionStorage.getItem('containerWidth')
 const storedHeight = sessionStorage.getItem('containerHeight')
 const main = document.querySelector('main')
 const container = document.querySelector('.background-container')
+const background = document.querySelector('.background')
 
 console.log(`Storage is: ${storedWidth} and ${storedHeight}`)
 
 window.onload = async () => {
     document.querySelector('[data-video]').play()
+
     if (main.offsetWidth < storedWidth) {
+        console.log('Smaller')
         main.style.minWidth = storedWidth + 'px'
-        await new Promise(r => setTimeout(r, 600));
+        await new Promise(r => setTimeout(r, 4));
+        background.style.transition = 'all 5000ms'
+        main.style.transition = 'all 5000ms'
+        container.style.transition = 'all 5000ms'
         main.style.minWidth = ''
-        await new Promise(r => setTimeout(r, 600));
+        await new Promise(r => setTimeout(r, 2000));
+        background.style.transition = ''
+        main.style.transition = ''
+        container.style.transition = ''
     }
     if (main.offsetWidth > storedWidth) {
+        console.log('Bigger')
         main.style.maxWidth = storedWidth + 'px'
-        await new Promise(r => setTimeout(r, 600));
+        await new Promise(r => setTimeout(r, 4));
+        background.style.transition = 'all 2000ms'
+        main.style.transition = 'all 2000ms'
+        container.style.transition = 'all 2000ms'
         main.style.maxWidth = ''
-        await new Promise(r => setTimeout(r, 600));
+        await new Promise(r => setTimeout(r, 2000));
+        background.style.transition = ''
+        main.style.transition = ''
+        container.style.transition = ''
     }
+
 }
 
 const animated = document.querySelectorAll('[data-animated]')

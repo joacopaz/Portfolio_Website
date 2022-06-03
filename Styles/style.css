@@ -45,6 +45,7 @@ body {
 	bottom: 1rem;
 	max-width: 1000px;
 	position: relative;
+	min-width: 0px;
 }
 .background {
 	background-color: #2d2d2cde;
@@ -66,7 +67,8 @@ nav h1 {
 	color: white;
 	width: max-content;
 	position: relative;
-	right: 6.5rem;
+	margin-right: 5rem;
+	gap: 10px;
 	padding: 0.5rem;
 	text-align: center;
 	font-family: "Bogart trial", sans-serif;
@@ -205,6 +207,8 @@ main {
 	cursor: default;
 	opacity: 0%;
 	transition: opacity 500ms;
+	min-width: 0px;
+	max-width: 1000px;
 }
 main h2,
 main h3 {
