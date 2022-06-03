@@ -216,3 +216,22 @@ img[alt="Github logo"]:hover {
 		font-size: 1rem;
 	}
 }
+
+@media screen and (max-width: 690px) {
+	.background {
+		padding: 0;
+	}
+	nav h1 {
+		margin: 0;
+		padding: 0;
+	}
+	.nav {
+		padding-top: 2px;
+	}
+	main > h2 {
+		font-size: 1rem;
+	}
+	main > h3 {
+		font-size: 0.8rem;
+	}
+}
