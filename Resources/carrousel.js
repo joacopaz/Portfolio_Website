@@ -26,6 +26,7 @@ buttons.forEach(button => {
         }
         nextSlide.dataset.active = true
         delete activeSlide.dataset.active
+        const slideH = activeSlide.offsetHeight
         await new Promise(r => setTimeout(r, 400));
         allSlides.forEach(slide => {
             if (!slide.dataset.active) slide.style.display = 'none'
