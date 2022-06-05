@@ -27,7 +27,7 @@ links.forEach(e => {
     e.addEventListener('click', async (event) => {
         const href = event.target.closest('a').href
         if (href.includes('#')) return false;
-        if (href.target.includes('_blank')) {
+        if (href.includes('_blank')) {
             window.open(href, '_blank');
         };
         event.preventDefault()
