@@ -54,7 +54,8 @@ body {
 }
 .loader-bar {
 	position: absolute;
-	width: 60%;
+	width: 0%;
+	transition: width 100ms;
 	height: 100%;
 	background: linear-gradient(to right, #c9ffbf, #6c94b4);
 	background-clip: content-box;
