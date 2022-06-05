@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="../Styles/Fonts/biotif.css" />
 		<link rel="stylesheet" href="../Styles/style.css" />
 		<link rel="stylesheet" href="../Styles/style-projects.css" />
+		<script src="../Resources/progressbar.js" defer></script>
 		<script
 			src="https://kit.fontawesome.com/6def926482.js"
 			crossorigin="anonymous"
@@ -21,6 +22,11 @@
 		<title>Joaquín Paz</title>
 	</head>
 	<body>
+		<div class="loader">
+			<div class="loader-container"> <p data-loaded-text>%</p>
+				<div class="loader-bar" data-loaded-bar></div>
+			</div>
+		</div>
 		<div class="background-video">
 			<video
 				id="background-video"
