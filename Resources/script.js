@@ -1,3 +1,10 @@
+$(window).on("load", function () {
+    $(".loader").fadeOut(100);
+});
+$(window).ready(function () {
+    $(".content").fadeIn(1000);
+});
+
 const main = document.querySelector('main')
 const container = document.querySelector('.background-container')
 
