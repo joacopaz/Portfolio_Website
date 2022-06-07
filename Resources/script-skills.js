@@ -1,5 +1,5 @@
 $(window).ready(() => {
-	if (!window.mobileCheck()) {
+	if (!mobile) {
 		document.querySelectorAll(".expand-button").forEach((button) => {
 			button.childNodes[0].click();
 		});
@@ -40,13 +40,11 @@ expandSkill.addEventListener("focusout", () => {
 expandSkill.addEventListener("click", (evt) => {
 	if (evt.target.parentNode.dataset.expanded === "false") {
 		document.querySelector(".all-skills").style.display = "";
-		document.querySelector(".image-container-skills").style.display = "";
 		evt.target.classList.remove("fa-square-plus");
 		evt.target.classList.add("fa-circle-minus");
 		evt.target.parentNode.dataset.expanded = "true";
 	} else {
 		document.querySelector(".all-skills").style.display = "none";
-		document.querySelector(".image-container-skills").style.display = "none";
 		evt.target.classList.remove("fa-circle-minus");
 		evt.target.classList.add("fa-square-plus");
 		evt.target.parentNode.dataset.expanded = "false";

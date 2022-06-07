@@ -1,12 +1,9 @@
-body {
-	min-height: 370px;
-}
-
 /* Main */
 
 .background-container {
-	min-width: 50%;
+	margin-top: 1.5rem;
 }
+
 main h2 {
 	margin: 1rem 2rem;
 }
@@ -31,7 +28,7 @@ main > h3 {
 .carrousel .slide {
 	width: 100%;
 	height: 100%;
-	min-height: 70vh;
+	/* min-height: 70vh; */
 	background-color: inherit;
 	display: none;
 	position: absolute;
@@ -69,10 +66,8 @@ main > h3 {
 .slide > img {
 	display: block;
 	width: 100%;
+	max-width: 700px;
 	height: auto;
-	/* max-height: 300px; */
-	object-position: 0 0;
-	object-fit: cover;
 	cursor: pointer;
 	transition: filter 500ms;
 }
@@ -239,10 +234,23 @@ img[alt="Github logo"]:hover {
 	main > h3 {
 		font-size: 0.8rem;
 	}
+	.background-container {
+		margin: 0;
+	}
 }
 
 @media screen and (max-width: 375px) {
 	.next {
 		right: 0.5rem;
+	}
+}
+
+@media screen and (min-width: 690px) {
+	main {
+		overflow-y: scroll;
+		height: 700px;
+		margin: 0;
+		padding: 0;
+		max-width: 800px;
 	}
 }

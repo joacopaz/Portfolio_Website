@@ -342,6 +342,7 @@ img[alt="Joaquin's Picture"] {
 		width: 100%;
 		min-height: 100vh;
 		height: 100%;
+		margin-top: 0;
 	}
 	.nav a {
 		min-width: max-content;
