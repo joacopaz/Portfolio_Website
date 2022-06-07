@@ -1,9 +1,12 @@
 $(window).on("load", function () {
 	$(".loader").fadeOut(100);
+	if (typeof $("footer") !== "undefined") {
+		document.querySelector("footer").style.opacity = "100%";
+	}
 });
+
 $(window).ready(function () {
 	$(".background").fadeIn(1000);
-	if ($("footer")) $("footer").fadeIn(1000);
 });
 
 const main = document.querySelector("main");
@@ -40,6 +43,9 @@ links.forEach((e) => {
 		}
 		event.preventDefault();
 		document.querySelector(".mask").style.opacity = "100%";
+		if (typeof $("footer") !== "undefined") {
+			document.querySelector("footer").style.opacity = "0%";
+		}
 		main.style.opacity = "0%";
 		window.location = href;
 	});
