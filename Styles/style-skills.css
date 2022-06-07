@@ -105,7 +105,6 @@ main {
 	justify-content: center;
 	display: none;
 	text-align: center;
-	overflow-x: scroll;
 }
 
 .level aside strong {
@@ -169,7 +168,7 @@ main {
 		max-width: unset;
 	}
 	.skill {
-		gap: 10px;
+		gap: 20px;
 		width: 350px;
 	}
 }
