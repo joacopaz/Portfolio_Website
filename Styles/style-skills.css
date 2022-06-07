@@ -16,8 +16,9 @@ main p {
 main {
 	/* height: 600px; */
 	max-height: 700px;
-	overflow-y: scroll;
+	max-width: 850px;
 	margin-bottom: 0;
+	overflow-y: scroll;
 }
 
 [alt="Skills"] {
@@ -25,12 +26,6 @@ main {
 	width: 200px;
 	border-radius: 50%;
 	object-fit: cover;
-}
-
-@media screen and (max-width: 1100px) {
-	.image-container-skills {
-		display: none;
-	}
 }
 
 /* Skills */
@@ -71,7 +66,6 @@ main {
 	margin: 1rem auto;
 	justify-content: flex-start;
 	background-color: rgba(0, 0, 0, 0.187);
-	max-width: 90%;
 }
 
 .skill {
@@ -158,14 +152,17 @@ main {
 	font-size: 0.9rem;
 }
 
-@media screen and (max-width: 690px) {
-	main {
-		height: 100%;
-		color: green;
-		max-height: unset;
+@media screen and (max-width: 1100px) {
+	.background-container {
+		width: 90%;
 	}
+}
+@media screen and (max-width: 930px) {
 	.level article {
 		max-width: unset;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.skill {
 		gap: 20px;
@@ -178,9 +175,6 @@ main {
 		justify-content: center;
 		align-items: center;
 	}
-	.level article {
-		flex-direction: column;
-	}
 	.skill {
 		margin: 0 auto;
 	}
@@ -189,6 +183,25 @@ main {
 	}
 	.level article aside {
 		margin-top: 0;
+	}
+	.background-container {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 690px) {
+	main {
+		height: 100%;
+		color: green;
+		max-height: unset;
+	}
+	.level article {
+		max-width: unset;
+	}
+	.skill {
+		gap: 20px;
+		width: 350px;
 	}
 }
 
