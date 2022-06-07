@@ -1,0 +1,181 @@
+/* Main */
+
+main h2 {
+	margin: 0;
+	margin-left: 1.5rem;
+}
+
+main h2,
+main p {
+	font-size: 1.1rem;
+}
+
+main {
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.image-container-skills {
+	position: absolute;
+	right: 4%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+[alt="Skills"] {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 1100px) {
+	.image-container-skills {
+		display: none;
+	}
+}
+
+/* Skills */
+.all-skills {
+	position: relative;
+}
+
+.level h2 {
+	margin: 1rem 1.5rem;
+	display: inline;
+	margin-right: 0;
+}
+.expand-button-skill {
+	font-size: 1rem;
+}
+.skill-header {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.level article {
+	display: flex;
+	margin: 1rem auto;
+	justify-content: flex-start;
+}
+
+.skill {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 3rem;
+	color: white;
+	gap: 30px;
+	max-width: 310px;
+}
+
+.skill h4 {
+	font-family: "Bogart trial";
+	width: 20px;
+	margin-right: 2rem;
+}
+
+.ldBar {
+	color: white;
+	position: relative;
+	right: 0.9rem;
+}
+
+.level article aside {
+	font-size: 0.8rem;
+	margin: 0.5rem;
+	padding: 0;
+	font-family: "Bogart", sans-serif;
+	display: flex;
+	justify-content: center;
+	display: none;
+	text-align: center;
+	overflow-x: scroll;
+}
+
+.level aside strong {
+	display: block;
+	padding: 0.2rem;
+	margin-top: 0.4rem;
+}
+
+.level aside span {
+	padding: 0.1rem;
+	width: 200px;
+}
+
+.expand-button,
+.expand-button-skill {
+	background: none;
+	border: none;
+	font-size: 1.1rem;
+	color: white;
+	width: fit-content;
+	height: fit-content;
+	cursor: pointer;
+	pointer-events: none;
+	caret-color: transparent;
+}
+.expand-button i,
+.expand-button-skill i {
+	cursor: pointer;
+	caret-color: transparent;
+	pointer-events: all;
+}
+
+.expand-button:focus,
+.expand-button-skill:focus {
+	outline: none;
+}
+
+.disclaimer {
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.449);
+	text-align: center;
+	font-size: 0.8rem;
+	max-width: 700px;
+	margin-bottom: 2rem;
+}
+.disclaimer span {
+	font-family: sans-serif;
+}
+.disclaimer strong {
+	display: block;
+	font-size: 0.9rem;
+}
+
+@media screen and (max-width: 700px) {
+	.skill-header {
+		justify-content: center;
+		align-items: center;
+	}
+	.level article {
+		flex-direction: column;
+	}
+	.skill {
+		margin: 0 auto;
+	}
+	.ldBar {
+		font-size: 0.8rem;
+	}
+	.level article aside {
+		margin-top: 0;
+	}
+}
+
+/* Road Map */
+
+.roadmap aside {
+	padding: 0;
+	font-family: "Biotif trial", sans-serif;
+	padding: 0;
+	margin-left: 2rem;
+	color: white;
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+.roadmap-implementation {
+	display: flex;
+}

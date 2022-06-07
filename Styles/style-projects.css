@@ -231,7 +231,7 @@ img[alt="Github logo"]:hover {
 
 @media screen and (max-width: 690px) {
 	.background {
-		padding: 0;
+		padding: auto 0;
 	}
 	main > h2 {
 		font-size: 1rem;
@@ -242,7 +242,6 @@ img[alt="Github logo"]:hover {
 }
 
 @media screen and (max-width: 375px) {
-
 	.next {
 		right: 0.5rem;
 	}
