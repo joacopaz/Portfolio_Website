@@ -186,6 +186,7 @@ footer {
 	font-size: 1.2rem;
 	width: 100%;
 	gap: 1rem;
+	opacity: 0%;
 }
 footer p {
 	flex-grow: 0;
@@ -218,6 +219,12 @@ img[alt="Github logo"]:hover {
 	filter: invert(75%);
 }
 
+@media screen and (max-width: 375px) {
+	.next {
+		right: 0.5rem;
+	}
+}
+
 @media screen and (max-width: 404px) {
 	footer {
 		font-size: 1rem;
@@ -236,12 +243,8 @@ img[alt="Github logo"]:hover {
 	}
 	.background-container {
 		margin: 0;
-	}
-}
-
-@media screen and (max-width: 375px) {
-	.next {
-		right: 0.5rem;
+		min-height: 100%;
+		overflow: hidden;
 	}
 }
 
