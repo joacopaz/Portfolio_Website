@@ -16,7 +16,7 @@ main > h3 {
 /* Carrousel  */
 
 .carrousel {
-	min-width: 346px;
+	min-width: 320px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
