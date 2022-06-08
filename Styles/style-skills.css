@@ -181,6 +181,14 @@ main {
 	width: 100%;
 	display: block;
 }
+.roadmap-element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 .destination {
 	position: absolute;
 	color: red;
@@ -211,6 +219,9 @@ main {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 500ms;
 }
 .tooltip p {
 	padding: 0;
@@ -225,13 +236,22 @@ main {
 	margin: 0.4rem;
 }
 
-.container .destination:nth-child(2) {
+.roadmap-element:nth-child(2) .destination {
 	top: 60%;
 	left: 25.5%;
 }
-.container .tooltip:nth-child(3) {
+.roadmap-element:nth-child(2) .tooltip {
 	top: 60%;
 	left: 25.5%;
+	transform: translate(-45%, -110%);
+}
+.roadmap-element:nth-child(3) .destination {
+	top: 35%;
+	left: 32.8%;
+}
+.roadmap-element:nth-child(3) .tooltip {
+	top: 35%;
+	left: 32.8%;
 	transform: translate(-45%, -110%);
 }
 

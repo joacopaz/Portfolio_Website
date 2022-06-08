@@ -99,3 +99,22 @@ document.querySelectorAll(".expand-button").forEach((button) => {
 		}
 	});
 });
+
+document.querySelectorAll(".destination i").forEach((e) => {
+	e.addEventListener("mouseenter", () => {
+		if (!e.className.includes("fa-beat")) e.classList.add("fa-beat");
+	});
+	e.addEventListener("mouseleave", () => {
+		if (e.className.includes("fa-beat")) e.classList.remove("fa-beat");
+	});
+	e.addEventListener("click", () => {
+		const tooltip = e.closest(".roadmap-element").querySelector(".tooltip");
+		if (tooltip.style.opacity === "") {
+			document.querySelectorAll(".tooltip").forEach(e => e.style.opacity = "")
+			tooltip.style.opacity = "100"
+		} else {
+			tooltip.style.opacity = ""
+		}
+
+	});
+});
