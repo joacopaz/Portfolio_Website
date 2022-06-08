@@ -165,9 +165,77 @@ main {
 	font-style: italic;
 }
 
-.roadmap-implementation {
-	display: flex;
+.roadmap-implementation .container {
+	height: auto;
+	width: 95%;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 2rem auto;
+	border: rgb(172, 196, 201) 1px solid;
+	border-radius: 25px;
+	padding: 1rem;
 }
+.roadmap-implementation .container img {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.destination {
+	position: absolute;
+	color: red;
+	z-index: 2;
+	font-size: 2.5rem;
+	cursor: pointer;
+}
+.destination::before {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 28%;
+	top: 16%;
+	background-color: white;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.container .tooltip {
+	position: absolute;
+	height: auto;
+	padding: 0.5rem;
+	z-index: 3;
+	border-radius: 25px;
+	background-color: rgba(0, 0, 0, 0.546);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.tooltip p {
+	padding: 0;
+	font-family: Ubuntu, sans-serif;
+}
+.tooltip strong {
+	display: block;
+	margin: 0.4rem;
+}
+.tooltip span {
+	display: block;
+	margin: 0.4rem;
+}
+
+.container .destination:nth-child(2) {
+	top: 60%;
+	left: 25.5%;
+}
+.container .tooltip:nth-child(3) {
+	top: 60%;
+	left: 25.5%;
+	transform: translate(-45%, -110%);
+}
+
+/* Responsiveness */
 
 @media screen and (min-width: 780px) {
 	.background-container {
@@ -206,7 +274,6 @@ main {
 @media screen and (max-width: 690px) {
 	main {
 		height: 100%;
-		color: green;
 		max-height: unset;
 	}
 	.level article {
