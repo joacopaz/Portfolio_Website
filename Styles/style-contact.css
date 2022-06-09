@@ -2,13 +2,18 @@ main hr {
 	margin-bottom: 0;
 }
 
+main {
+	overflow-y: scroll;
+}
+
 .grid {
 	display: grid;
 	margin: 0 1rem;
 	margin-top: 1rem;
-	grid-template: 1fr 1fr / repeat(auto-fill, 1fr) 1fr;
-	align-items: center;
-	justify-items: center;
+	grid-template: auto auto / minmax(280px, 1.5fr) minmax(100px, 2fr);
+	align-items: flex-start;
+	justify-items: left;
+	grid-auto-rows: 1fr;
 }
 .grid-one {
 	grid-column: 1 / span 1;
@@ -21,7 +26,7 @@ main hr {
 	grid-column: 2 / span 1;
 	width: 100%;
 	height: 100%;
-	border: grey solid 1px;
+	border-radius: 25px;
 }
 
 .grid-three-four {
@@ -32,12 +37,56 @@ main hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
+	height: 100%;
+	align-self: center;
+	justify-self: center;
+	gap: 20px;
 }
 
-@media screen and (max-width: 690px) {
-	main {
-		min-height: calc(100vh - 220px);
-	}
+.grid .image-container {
+	position: relative;
+	right: unset;
+	top: unset;
+	max-width: 150px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.grid .image-container img {
+	max-height: 100%;
+	width: 100%;
+	min-height: 90px;
+	display: block;
+	object-fit: cover;
+	filter: invert(0%);
+	transition: filter 200ms;
+}
+.grid .image-container img[alt="Whatsapp Contact"] {
+	width: 90px;
+	position: absolute;
+	left: 0;
+}
+
+.grid .image-container:hover img {
+	filter: invert(30%);
+}
+
+.mail {
+	color: white;
+	padding: 1rem;
+	background-color: rgba(0, 0, 0, 0.664);
+	width: fit-content;
+	border-radius: 25px;
+	position: absolute;
+	display: none;
+}
+
+@media screen and (max-width: 710px) {
 	.grid-one {
 		justify-self: left;
 		grid-column: 1 / span 2;
@@ -46,19 +95,47 @@ main hr {
 		grid-column: 1 / span 2;
 		grid-row: 3;
 	}
+	.contact-info {
+		gap: 50px;
+		margin: 2rem 0;
+	}
 }
 
-@media screen and (max-width: 380px) {
-	html {
-		font-size: 17px;
+@media screen and (max-width: 690px) {
+	main {
+		min-height: 73vh;
 	}
+}
+
+@media screen and (max-width: 450px) {
 	main h2,
 	.grid p,
 	main hr {
 		margin-left: 1rem;
 		padding-left: 0;
+		font-size: 1.3rem;
 	}
 	.grid {
-		margin-left: 0;
+		margin-left: 5px;
+		margin-right: 8px;
+	}
+}
+@media screen and (max-width: 396px) {
+	.contact-info {
+		gap: 20px;
+	}
+	.contact-info .image-container {
+		width: 90px;
+	}
+	main h2,
+	main hr,
+	main .grid p {
+		margin: 1rem;
+		padding: 0;
+		margin-left: 0.5rem;
+	}
+	.grid {
+		margin: 0;
+		grid-template: auto auto / minmax(200px, 1.5fr) minmax(50px, 2fr);
 	}
 }
