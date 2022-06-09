@@ -474,3 +474,9 @@ main {
 		transform: translate(-2%, 40%);
 	}
 }
+@media screen and (max-width: 340px) {
+	.skill {
+		padding-left: 0;
+		width: 340px;
+	}
+}

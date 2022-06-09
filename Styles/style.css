@@ -510,6 +510,8 @@ img[alt="joacopaz"]:hover {
 	.image-container {
 		width: 120px;
 		height: 120px;
+		top: 20px;
+		right: 13%;
 	}
 	.background {
 		padding: 0;
@@ -521,9 +523,11 @@ img[alt="joacopaz"]:hover {
 		font-size: 0.9rem;
 	}
 }
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 338px) {
 	.image-container {
-		top: 40px;
-		right: 10px;
+		top: 50px;
+	}
+	nav {
+		font-size: 0.8rem;
 	}
 }
