@@ -4,6 +4,10 @@
 	margin-top: 1.5rem;
 }
 
+.background {
+	padding-bottom: 0;
+}
+
 main h2 {
 	margin: 1rem 2rem;
 }
@@ -175,60 +179,9 @@ main > h3 {
 	}
 }
 
-/* Footer */
-
-footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	font-family: "Bogart trial", sans-serif;
-	font-size: 1.2rem;
-	width: 100%;
-	gap: 1rem;
-	opacity: 0%;
-	transition: opacity 1000ms;
-}
-footer p {
-	flex-grow: 0;
-	text-align: right;
-}
-footer .main-link {
-	padding: 1px;
-}
-
-footer .image-container {
-	position: relative;
-	height: fit-content;
-	width: fit-content;
-	right: unset;
-	top: unset;
-}
-img[alt="Github logo"] {
-	display: block;
-	position: relative;
-	height: auto;
-	width: 100px;
-	cursor: pointer;
-	transition: filter 200ms;
-}
-img[alt="Github logo"]:active {
-	border: orange 1px solid;
-}
-
-img[alt="Github logo"]:hover {
-	filter: invert(75%);
-}
-
 @media screen and (max-width: 375px) {
 	.next {
 		right: 0.5rem;
-	}
-}
-
-@media screen and (max-width: 404px) {
-	footer {
-		font-size: 1rem;
 	}
 }
 

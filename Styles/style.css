@@ -102,6 +102,7 @@ body {
 	height: 100%;
 	box-shadow: rgba(0, 0, 0, 0.224) 20px 20px;
 	padding: 1rem;
+	padding-bottom: 0;
 }
 
 a {
@@ -330,6 +331,85 @@ img[alt="Joaquin's Picture"] {
 	transform: scale(1.2);
 	border: #f1a708 1px solid;
 	opacity: 100%;
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	font-family: "Bogart trial", sans-serif;
+	font-size: 1.2rem;
+	width: 100%;
+	gap: 1rem;
+	opacity: 0%;
+	transition: opacity 1000ms;
+	border-top: 1px solid rgba(128, 128, 128, 0.331);
+}
+footer ul {
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	font-family: "Biotif", sans-serif;
+	color: rgba(255, 255, 255, 0.792);
+}
+footer .main-link {
+	padding: 1px;
+}
+footer span {
+	display: inline;
+}
+footer .image-container {
+	position: relative;
+	height: fit-content;
+	width: fit-content;
+	right: unset;
+	display: block;
+	top: unset;
+}
+img[alt="Github logo"] {
+	display: inline;
+	position: relative;
+	height: auto;
+	width: 100px;
+	cursor: pointer;
+	filter: invert(75%);
+	transition: filter 200ms;
+}
+img[alt="Github logo"]:active {
+	border: orange 1px solid;
+}
+
+img[alt="Github logo"]:hover {
+	filter: invert(0%);
+}
+
+img[alt="joacopaz"] {
+	display: inline;
+	position: relative;
+	height: auto;
+	width: 100px;
+	cursor: pointer;
+	filter: invert(0%);
+	transition: filter 200ms;
+	cursor: default;
+}
+
+img[alt="joacopaz"]:hover {
+	filter: invert(40%);
+}
+.copyright {
+	transition: filter 200ms;
+	cursor: default;
+	caret-color: transparent;
+}
+.copyright:hover {
+	filter: invert(20%);
 }
 
 /* Responsive */

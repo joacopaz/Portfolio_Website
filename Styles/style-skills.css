@@ -9,9 +9,6 @@ main h2,
 main p {
 	font-size: 1.1rem;
 }
-.background {
-	padding: 0;
-}
 
 main {
 	/* height: 600px; */
@@ -60,7 +57,10 @@ main {
 .roadmap-header {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	gap: 20px;
+	width: 180px;
+	padding: 0;
 }
 
 .level article {

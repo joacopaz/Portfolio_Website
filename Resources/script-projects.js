@@ -5,9 +5,6 @@ projectLinks.forEach(link => {
         window.open(evt.target.dataset.projectImage, '_blank');
     })
 })
-document.querySelector('[alt="Github logo"]').addEventListener('click', (evt) => {
-    window.open(evt.target.dataset.linkTo, '_blank');
-})
 
 document.addEventListener('swiped-right', () => {
     document.querySelector('[data-carrousel-button = "prev"]').click()

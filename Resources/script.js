@@ -50,3 +50,7 @@ links.forEach((e) => {
 		window.location = href;
 	});
 });
+
+document.querySelector('[alt="Github logo"]').addEventListener('click', (evt) => {
+	window.open(evt.target.dataset.linkTo, '_blank');
+})
