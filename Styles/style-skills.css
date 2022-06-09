@@ -18,6 +18,10 @@ main {
 	overflow-y: scroll;
 }
 
+main hr {
+	margin-bottom: 0;
+}
+
 [alt="Skills"] {
 	height: 200px;
 	width: 200px;

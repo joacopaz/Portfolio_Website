@@ -266,6 +266,16 @@ main h3 {
 	font-weight: 600;
 	width: fit-content;
 }
+
+main h2.animated {
+	margin-bottom: 0;
+}
+
+main hr {
+	width: 50%;
+	margin-left: 2rem;
+	margin-bottom: 2rem;
+}
 h2 {
 	padding: 0.5rem;
 }
@@ -421,8 +431,7 @@ img[alt="joacopaz"]:hover {
 	.image-container {
 		width: 150px;
 		height: 150px;
-		top: -1.6rem;
-		right: 6.5rem;
+		right: 10%;
 	}
 	main p {
 		min-width: 100%;
@@ -501,17 +510,29 @@ img[alt="joacopaz"]:hover {
 		margin: 0;
 	}
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 	.image-container {
-		right: 10%;
+		right: 5%;
 	}
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
 	.image-container {
 		width: 120px;
 		height: 120px;
 		top: 20px;
 		right: 13%;
+	}
+	.background {
+		padding: 0;
+		overflow: hidden;
+	}
+}
+@media screen and (max-width: 446px) {
+	.image-container {
+		width: 120px;
+		height: 120px;
+		left: 7=60%;
+		top: 70px;
 	}
 	.background {
 		padding: 0;
@@ -525,7 +546,6 @@ img[alt="joacopaz"]:hover {
 }
 @media screen and (max-width: 338px) {
 	.image-container {
-		top: 50px;
 	}
 	nav {
 		font-size: 0.8rem;
