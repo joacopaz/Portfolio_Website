@@ -37,18 +37,15 @@ body {
 /* Loader */
 
 .loader {
-	width: 100%;
-	height: 100%;
 	position: absolute;
-	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+	width: 100%;
 }
 .loader img {
 	width: 200px;
-	height: auto;
-	position: absolute;
-	top: 15vh;
-	left: calc(50% - 100px);
-
 	animation-name: rotate;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
@@ -251,8 +248,8 @@ nav {
 
 main {
 	margin: 2rem auto;
+	margin-top: 1rem;
 	position: relative;
-	padding-bottom: 2rem;
 	cursor: default;
 	opacity: 0%;
 	transition: opacity 500ms;
@@ -261,6 +258,7 @@ main {
 main h2,
 main h3 {
 	margin: 2rem;
+	margin-top: 1rem;
 	color: white;
 	font-family: "Bogart trial", sans-serif;
 	font-weight: 600;
@@ -504,7 +502,7 @@ img[alt="joacopaz"]:hover {
 		padding-bottom: 0;
 	}
 	.image-container {
-		top: 0;
+		top: 3%;
 	}
 	footer {
 		margin: 0;
@@ -519,7 +517,6 @@ img[alt="joacopaz"]:hover {
 	.image-container {
 		width: 120px;
 		height: 120px;
-		top: 20px;
 		right: 13%;
 	}
 	.background {

@@ -16,6 +16,9 @@ main > h3 {
 	margin: 0 2rem;
 	font-weight: 400;
 }
+main hr {
+	margin-bottom: 0.2rem;
+}
 
 /* Carrousel  */
 

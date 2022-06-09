@@ -5,7 +5,6 @@ main h2 {
 	margin-left: 1.5rem;
 }
 
-main h2,
 main p {
 	font-size: 1.1rem;
 }
@@ -20,6 +19,12 @@ main {
 
 main hr {
 	margin-bottom: 0;
+}
+
+main h3 {
+	font-size: 1.2rem;
+	margin: 0.5rem 0;
+	margin-left: 2rem;
 }
 
 [alt="Skills"] {
@@ -53,10 +58,7 @@ main hr {
 	display: inline;
 	margin-right: 0;
 }
-.expand-button-skill,
-.expand-button-roadmap {
-	font-size: 1rem;
-}
+
 .skill-header,
 .roadmap-header {
 	display: flex;
@@ -307,13 +309,13 @@ main hr {
 
 /* Responsiveness */
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 841px) {
 	.background-container {
 		width: 840px;
 	}
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 840px) {
 	.level article {
 		max-width: unset;
 		flex-direction: column;
@@ -339,10 +341,6 @@ main hr {
 	}
 	.level article aside {
 		margin-top: 0;
-	}
-	.background-container {
-		height: 100%;
-		width: 100%;
 	}
 	.roadmap-element .tooltip > * {
 		font-size: 0.8rem;
@@ -385,6 +383,12 @@ main hr {
 	.skill {
 		gap: 20px;
 		width: 350px;
+	}
+	main h3 {
+		font-size: 1rem;
+	}
+	main {
+		min-height: calc(100vh - 220px);
 	}
 }
 @media screen and (max-width: 522px) {
