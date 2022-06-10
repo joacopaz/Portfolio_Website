@@ -408,6 +408,7 @@ img[alt="joacopaz"] {
 	filter: invert(0%);
 	transition: filter 200ms;
 	cursor: default;
+	caret-color: transparent;
 }
 
 img[alt="joacopaz"]:hover {
