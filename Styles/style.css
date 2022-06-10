@@ -625,6 +625,12 @@ img[alt="joacopaz"]:hover {
 	}
 }
 
+@media screen and (max-width:430px) {
+	.resume p {
+		flex-direction: column;
+	}
+}
+
 @media screen and (max-width: 375px) {
 	nav {
 		font-size: 0.9rem;
