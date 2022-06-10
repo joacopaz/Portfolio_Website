@@ -365,6 +365,7 @@ footer ul {
 	font-family: "Biotif", sans-serif;
 	color: rgba(255, 255, 255, 0.792);
 }
+
 footer .main-link {
 	padding: 1px;
 }
@@ -380,7 +381,7 @@ footer .image-container {
 	top: unset;
 }
 img[alt="Github logo"] {
-	display: inline;
+	display: block;
 	position: relative;
 	height: auto;
 	width: 100px;
@@ -397,8 +398,7 @@ img[alt="Github logo"]:hover {
 }
 
 img[alt="joacopaz"] {
-	display: inline;
-	position: relative;
+	display: block;
 	height: auto;
 	width: 100px;
 	cursor: pointer;
