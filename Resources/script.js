@@ -35,7 +35,6 @@ animated.forEach((e) => {
 
 const links = document.querySelectorAll("a");
 links.forEach((e) => {
-	if (e.href === "./Resources/Joaquin-Paz-Resume.pdf") return
 	e.addEventListener("click", async (event) => {
 		const href = event.target.closest("a").href;
 		if (href.includes("#")) return false;
@@ -54,4 +53,8 @@ links.forEach((e) => {
 
 document.querySelector('[alt="Github logo"]').addEventListener('click', (evt) => {
 	window.open(evt.target.dataset.linkTo, '_blank');
+})
+
+document.querySelector(".resume").addEventListener("click", () => {
+	window.location = "./Resources/Joaquin-Paz-Resume.pdf"
 })
