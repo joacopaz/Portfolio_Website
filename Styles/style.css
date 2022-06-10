@@ -375,13 +375,21 @@ img[alt="Joaquin's Picture"] {
 	opacity: 100%;
 }
 
+.resume {
+	width: fit-content;
+	margin: 0 auto;
+	display: flex;
+}
+
 .resume p {
 	text-align: center;
+	height: min-content;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
+	border: 1px solid rgba(128, 128, 128, 0.331);
 }
 
 .resume-container img {
@@ -389,6 +397,8 @@ img[alt="Joaquin's Picture"] {
 	width: 70px;
 }
 
+.resume p a:hover+.resume-container img,
+.resume p a:hover,
 .resume-container:hover img {
 	filter: invert(20%);
 }
