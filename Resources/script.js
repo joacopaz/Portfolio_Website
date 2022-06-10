@@ -35,6 +35,7 @@ animated.forEach((e) => {
 
 const links = document.querySelectorAll("a");
 links.forEach((e) => {
+	if (e.href = "./Resources/Joaquin-Paz-Resume.pdf") return
 	e.addEventListener("click", async (event) => {
 		const href = event.target.closest("a").href;
 		if (href.includes("#")) return false;

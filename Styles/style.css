@@ -46,6 +46,7 @@ body {
 	height: 70%;
 	width: 100%;
 }
+
 .loader img {
 	width: 200px;
 	animation-name: rotate;
@@ -53,10 +54,12 @@ body {
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
+
 @keyframes rotate {
 	from {
 		transform: rotate(0deg);
 	}
+
 	to {
 		transform: rotate(360deg);
 	}
@@ -74,11 +77,13 @@ body {
 	transition: opacity 500ms;
 	overflow: hidden;
 }
+
 .background-video video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
+
 .mask {
 	position: fixed;
 	width: 100vw;
@@ -90,10 +95,12 @@ body {
 	transition: opacity 500ms;
 	pointer-events: none;
 }
+
 .background-container {
 	bottom: 1rem;
 	position: relative;
 }
+
 .background {
 	background-color: #2d2d2cde;
 	transition: background-color 500ms;
@@ -121,6 +128,7 @@ nav h1 {
 	text-align: center;
 	font-family: "Bogart trial", sans-serif;
 }
+
 nav {
 	display: flex;
 	align-items: center;
@@ -138,7 +146,7 @@ nav {
 	width: 100%;
 }
 
-.nav > * {
+.nav>* {
 	margin: 0 1rem;
 	text-decoration: none;
 	color: white;
@@ -162,9 +170,11 @@ nav {
 	0% {
 		background-position: left;
 	}
+
 	50% {
 		background-position: right;
 	}
+
 	100% {
 		background-position: left;
 	}
@@ -180,18 +190,21 @@ nav {
 	transition: width 200ms 200ms, left 200ms 200ms;
 }
 
-.nav a:hover:nth-child(1) ~ .underline {
+.nav a:hover:nth-child(1)~.underline {
 	width: 71px;
 }
-.nav a:hover:nth-child(2) ~ .underline {
+
+.nav a:hover:nth-child(2)~.underline {
 	width: 57px;
 	left: 6.35rem;
 }
-.nav a:hover:nth-child(3) ~ .underline {
+
+.nav a:hover:nth-child(3)~.underline {
 	width: 33px;
 	left: 11.99rem;
 }
-.nav a:hover:nth-child(4) ~ .underline {
+
+.nav a:hover:nth-child(4)~.underline {
 	width: 57px;
 	left: 16.3rem;
 }
@@ -201,17 +214,20 @@ nav {
 .animated {
 	position: relative;
 }
+
 .animation {
 	position: absolute;
 	background-color: white;
 	transition: width 200ms, height 200ms;
 }
+
 .animation.l1 {
 	right: -10px;
 	bottom: 0;
 	width: 1px;
 	height: 0%;
 }
+
 .animation.l2 {
 	right: -10px;
 	top: 0;
@@ -219,6 +235,7 @@ nav {
 	height: 1px;
 	transition-delay: 200ms;
 }
+
 .animation.l3 {
 	left: -10px;
 	top: 0;
@@ -226,6 +243,7 @@ nav {
 	height: 0%;
 	transition-delay: 400ms;
 }
+
 .animation.l4 {
 	left: -10px;
 	bottom: 0;
@@ -233,15 +251,19 @@ nav {
 	height: 1px;
 	transition-delay: 600ms;
 }
+
 .animated:hover .animation.l1 {
 	height: 100%;
 }
+
 .animated:hover .animation.l2 {
 	width: calc(100% + 20px);
 }
+
 .animated:hover .animation.l3 {
 	height: 100%;
 }
+
 .animated:hover .animation.l4 {
 	width: calc(100% + 20px);
 }
@@ -256,6 +278,7 @@ main {
 	transition: opacity 500ms;
 	max-width: 1000px;
 }
+
 main h2,
 main h3 {
 	margin: 2rem;
@@ -278,14 +301,17 @@ main hr {
 	height: 1px;
 	border: none;
 }
+
 h2 {
 	padding: 0.5rem;
 }
+
 h3 {
 	font-size: 1.5rem;
 	font-weight: 500;
 	font-family: "Bogart Trial", sans-serif;
 }
+
 main p,
 main aside {
 	padding: 1rem 2rem;
@@ -294,6 +320,7 @@ main aside {
 	font-size: 1.4rem;
 	max-width: 630px;
 }
+
 .image-container {
 	width: 300px;
 	height: 300px;
@@ -302,6 +329,7 @@ main aside {
 	top: 0;
 	transition: opacity 200ms;
 }
+
 img[alt="Joaquin's Picture"] {
 	width: 100%;
 	height: 100%;
@@ -322,6 +350,7 @@ img[alt="Joaquin's Picture"] {
 	text-decoration: underline;
 	padding: 0.5rem 0rem;
 }
+
 .main-link:hover {
 	color: #f1a708;
 	text-decoration: none;
@@ -339,10 +368,29 @@ img[alt="Joaquin's Picture"] {
 	opacity: 0%;
 	transition: border 200ms, transform 200ms, opacity 200ms;
 }
+
 .main-link:hover::before {
 	transform: scale(1.2);
 	border: #f1a708 1px solid;
 	opacity: 100%;
+}
+
+.resume p {
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.resume-container img {
+	max-height: 100%;
+	width: 70px;
+}
+
+.resume-container:hover img {
+	filter: invert(20%);
 }
 
 /* Footer */
@@ -360,6 +408,7 @@ footer {
 	transition: opacity 1000ms;
 	border-top: 1px solid rgba(128, 128, 128, 0.331);
 }
+
 footer ul {
 	display: flex;
 	list-style: none;
@@ -374,9 +423,11 @@ footer ul {
 footer .main-link {
 	padding: 1px;
 }
+
 footer span {
 	display: inline;
 }
+
 footer .image-container {
 	position: relative;
 	height: fit-content;
@@ -385,6 +436,7 @@ footer .image-container {
 	display: block;
 	top: unset;
 }
+
 img[alt="Github logo"] {
 	display: block;
 	position: relative;
@@ -394,6 +446,7 @@ img[alt="Github logo"] {
 	filter: invert(75%);
 	transition: filter 200ms;
 }
+
 img[alt="Github logo"]:active {
 	border: orange 1px solid;
 }
@@ -416,11 +469,13 @@ img[alt="joacopaz"] {
 img[alt="joacopaz"]:hover {
 	filter: invert(40%);
 }
+
 .copyright {
 	transition: filter 200ms;
 	cursor: default;
 	caret-color: transparent;
 }
+
 .copyright:hover {
 	filter: invert(20%);
 }
@@ -436,16 +491,19 @@ img[alt="joacopaz"]:hover {
 		height: 150px;
 		right: 10%;
 	}
+
 	main p {
 		min-width: 100%;
 	}
 }
+
 @media screen and (max-width: 840px) {
 	.background-container {
 		width: 94%;
 		bottom: 0;
 	}
 }
+
 @media screen and (max-width: 690px) {
 	.background-container {
 		width: 100%;
@@ -453,9 +511,11 @@ img[alt="joacopaz"]:hover {
 		min-height: 100%;
 		overflow: hidden;
 	}
+
 	.nav a {
 		min-width: max-content;
 	}
+
 	.background {
 		min-height: 100vh;
 		height: 100%;
@@ -464,34 +524,39 @@ img[alt="joacopaz"]:hover {
 	html {
 		font-size: 18px;
 	}
+
 	nav {
 		margin: 0;
 		flex-direction: column-reverse;
 		align-items: center;
 		padding: 0;
 	}
+
 	.nav {
 		justify-content: center;
 	}
+
 	nav .underline {
 		width: 100%;
 		margin: 0;
 	}
-	.nav a:hover:nth-child(1) ~ .underline {
+
+	.nav a:hover:nth-child(1)~.underline {
 		width: 71px;
 		left: calc(50% - 10rem);
 	}
-	.nav a:hover:nth-child(2) ~ .underline {
+
+	.nav a:hover:nth-child(2)~.underline {
 		width: 57px;
 		left: calc(50% - 3.4rem);
 	}
 
-	.nav a:hover:nth-child(3) ~ .underline {
+	.nav a:hover:nth-child(3)~.underline {
 		width: 33px;
 		left: calc(50% + 2.2rem);
 	}
 
-	.nav a:hover:nth-child(4) ~ .underline {
+	.nav a:hover:nth-child(4)~.underline {
 		width: 57px;
 		left: calc(50% + 6.3rem);
 	}
@@ -502,33 +567,40 @@ img[alt="joacopaz"]:hover {
 		right: 0;
 		margin: 1rem 0;
 	}
+
 	main {
 		min-width: 320px;
 		padding-bottom: 0;
 	}
+
 	.image-container {
 		top: 3%;
 	}
+
 	footer {
 		margin: 0;
 	}
 }
+
 @media screen and (max-width: 550px) {
 	.image-container {
 		right: 5%;
 	}
 }
+
 @media screen and (max-width: 480px) {
 	.image-container {
 		width: 120px;
 		height: 120px;
 		right: 13%;
 	}
+
 	.background {
 		padding: 0;
 		overflow: hidden;
 	}
 }
+
 @media screen and (max-width: 446px) {
 	.image-container {
 		width: 120px;
@@ -536,16 +608,19 @@ img[alt="joacopaz"]:hover {
 		left: 7=60%;
 		top: 70px;
 	}
+
 	.background {
 		padding: 0;
 		overflow: hidden;
 	}
 }
+
 @media screen and (max-width: 375px) {
 	nav {
 		font-size: 0.9rem;
 	}
 }
+
 @media screen and (max-width: 338px) {
 	nav {
 		font-size: 0.8rem;
