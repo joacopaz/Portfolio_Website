@@ -76,10 +76,10 @@ main hr {
 	max-width: 700px;
 	height: auto;
 	cursor: pointer;
-	transition: filter 500ms;
+	transition: filter 200ms;
 }
 .slide > img:hover {
-	filter: saturate(20%);
+	filter: invert(10%);
 }
 .slide a {
 	padding: 1px;
