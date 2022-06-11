@@ -530,6 +530,11 @@ img[alt="joacopaz"]:hover {
 		overflow: hidden;
 	}
 
+	main .image-container {
+		width: 100px;
+		height: 100px;
+	}
+
 	.nav a {
 		min-width: max-content;
 	}
@@ -594,7 +599,7 @@ img[alt="joacopaz"]:hover {
 	}
 
 	.image-container {
-		top: 3%;
+		top: 5%;
 	}
 
 	footer {
@@ -605,6 +610,7 @@ img[alt="joacopaz"]:hover {
 @media screen and (max-width: 550px) {
 	.image-container {
 		right: 5%;
+		top: 0;
 	}
 
 	.background {
@@ -639,21 +645,7 @@ img[alt="joacopaz"]:hover {
 	}
 }
 
-@media screen and (max-width: 480px) {
-	.image-container {
-		width: 120px;
-		height: 120px;
-		right: 13%;
-	}
-}
-
 @media screen and (max-width: 446px) {
-	.image-container {
-		width: 120px;
-		height: 120px;
-		left: 7=60%;
-		top: 70px;
-	}
 
 	.background {
 		padding: 0;
