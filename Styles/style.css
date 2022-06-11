@@ -424,7 +424,9 @@ footer {
 	gap: 1rem;
 	opacity: 0%;
 	transition: opacity 1000ms;
-	border-top: 1px solid rgba(128, 128, 128, 0.331);
+	border-top: 1px solid rgba(36, 11, 11, 0.331);
+	margin: 0;
+	padding: 0 .5rem;
 }
 
 footer ul {
