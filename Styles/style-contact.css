@@ -6,18 +6,23 @@ main {
 	overflow-y: scroll;
 }
 
+main h2 {
+	margin-top: 0;
+}
+
 .grid {
 	display: grid;
-	margin: 0 1rem;
 	margin-top: 1rem;
-	grid-template: auto auto / minmax(280px, 1.5fr) minmax(100px, 2fr);
+	grid-template: auto auto / minmax(200px, 1.5fr) 6fr;
 	align-items: flex-start;
 	justify-items: left;
 	grid-auto-rows: 1fr;
 }
+
 .grid-one {
 	grid-column: 1 / span 1;
 }
+
 .grid-one p {
 	padding-right: 0;
 }
@@ -37,19 +42,34 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
-	align-self: center;
+	width: 473.6px;
+	height: 112px;
 	justify-self: center;
 	gap: 20px;
+}
+
+.resume {
+	width: 20%;
+	flex-direction: column;
+	margin: 0;
+	padding: 0 .5rem;
+	gap: .5rem;
+	border-radius: 25px;
+	caret-color: transparent;
+}
+
+.resume span {
+	border-radius: 25px;
+	caret-color: transparent;
 }
 
 .grid .image-container {
 	position: relative;
 	right: unset;
 	top: unset;
-	max-width: 150px;
+	width: 20%;
 	height: 90px;
+	min-width: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -57,19 +77,18 @@ main {
 	overflow: hidden;
 	cursor: pointer;
 }
+
 .grid .image-container img {
-	max-height: 100%;
+	height: 100%;
 	width: 100%;
-	min-height: 90px;
 	display: block;
 	object-fit: cover;
 	filter: invert(0%);
 	transition: filter 200ms;
 }
-.grid .image-container img[alt="Whatsapp Contact"] {
-	width: 90px;
-	position: absolute;
-	left: 0;
+
+.grid .image-container:nth-child(4) {
+	width: 19%;
 }
 
 .grid .image-container:hover img {
@@ -86,56 +105,41 @@ main {
 	display: none;
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 722px) {
 	.grid-one {
 		justify-self: left;
 		grid-column: 1 / span 2;
 	}
+
 	.grid-two {
 		grid-column: 1 / span 2;
 		grid-row: 3;
 	}
+
 	.contact-info {
-		gap: 50px;
-		margin: 2rem 0;
+		margin: 1rem 0;
 	}
 }
 
-@media screen and (max-width: 690px) {
-	main {
-		min-height: 73vh;
+@media screen and (max-width: 550px) {
+	main h2 {
+		margin-top: 1rem;
 	}
 }
 
-@media screen and (max-width: 450px) {
-	main h2,
-	.grid p,
-	main hr {
-		margin-left: 1rem;
-		padding-left: 0;
-		font-size: 1.3rem;
-	}
-	.grid {
-		margin-left: 5px;
-		margin-right: 8px;
-	}
-}
-@media screen and (max-width: 396px) {
+@media screen and (max-width: 472px) {
 	.contact-info {
-		gap: 20px;
+		width: 100%;
+		justify-content: space-evenly;
+		gap: 0px;
 	}
+
+	.contact-info p {
+		font-size: .8rem;
+	}
+
 	.contact-info .image-container {
-		width: 90px;
-	}
-	main h2,
-	main hr,
-	main .grid p {
-		margin: 1rem;
-		padding: 0;
-		margin-left: 0.5rem;
-	}
-	.grid {
-		margin: 0;
-		grid-template: auto auto / minmax(200px, 1.5fr) minmax(50px, 2fr);
+		height: 75px;
+		width: 20%;
 	}
 }

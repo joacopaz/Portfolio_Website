@@ -59,3 +59,7 @@ document.querySelectorAll('a.image-container').forEach(container => {
     if (!mobileCheck()) wp.href = 'https://api.WhatsApp.com/send?phone=5491165601091'
 
 })
+
+document.querySelector(".resume").addEventListener("click", () => {
+    window.location = "./Resources/Joaquin Paz Resume.pdf"
+})

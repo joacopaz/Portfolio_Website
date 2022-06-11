@@ -8,14 +8,7 @@
 	padding-bottom: 0;
 }
 
-main h2 {
-	margin: 1rem 2rem;
-}
-main > h3 {
-	font-size: 1rem;
-	margin: 0 2rem;
-	font-weight: 400;
-}
+
 main hr {
 	margin-bottom: 0.2rem;
 }
@@ -54,23 +47,26 @@ main hr {
 	z-index: -1;
 	flex-direction: column;
 }
-.slide > p {
+
+.slide>p {
 	align-self: flex-start;
 	font-size: 1rem;
 	padding-top: 0.5rem;
+	padding-right: 2rem
 }
-.slide > h4 {
+
+.slide>h4 {
 	align-self: flex-start;
 	margin: 1rem 2rem 0;
 }
 
-.slide > h3 {
+.slide>h3 {
 	margin: 1rem 0;
 	min-width: max-content;
 	font-size: 1.2rem;
 }
 
-.slide > img {
+.slide>img {
 	display: block;
 	width: 100%;
 	max-width: 700px;
@@ -78,12 +74,15 @@ main hr {
 	cursor: pointer;
 	transition: filter 200ms;
 }
-.slide > img:hover {
+
+.slide>img:hover {
 	filter: invert(10%);
 }
+
 .slide a {
 	padding: 1px;
 }
+
 .slide[data-active] {
 	transition-delay: 0ms;
 	opacity: 100%;
@@ -92,6 +91,7 @@ main hr {
 	position: relative;
 	height: fit-content;
 }
+
 .carrousel [data-carrousel-button] {
 	position: absolute;
 	color: rgba(255, 255, 255, 0.5);
@@ -107,102 +107,16 @@ main hr {
 	caret-color: transparent;
 	transition: background-color 200ms, color 200ms;
 }
+
 .prev {
 	left: 1rem;
 }
+
 .next {
 	right: 1rem;
 }
-@media screen and (max-width: 475px) {
-	.slide > h3 {
-		font-size: 0.9rem;
-	}
-	.prev {
-		left: 0.5rem;
-	}
-	.next {
-		right: 0.5rem;
-	}
-	main h2,
-	main h3,
-	.slide p,
-	.slide h4 {
-		padding: 0.5rem;
-		margin: 0.5rem;
-		margin-bottom: 0;
-		padding-bottom: 0.2rem;
-	}
-	main h2 {
-		padding: 0;
-		padding-bottom: 0.5rem;
-		margin-top: 0;
-	}
-	main hr {
-		margin: 0;
-		margin-left: 0.5rem;
-	}
-}
-
-[data-carrousel-button]:hover,
-[data-carrousel-button]:focus {
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-}
-[data-carrousel-button]:focus {
-	outline: 1px solid black;
-}
-
-@keyframes exitLeft {
-	from {
-		left: 0;
-	}
-	to {
-		left: -100%;
-	}
-}
-
-@keyframes exitRight {
-	from {
-		left: 0;
-	}
-	to {
-		left: 100%;
-	}
-}
-@keyframes enterLeft {
-	from {
-		left: 100%;
-	}
-	to {
-		left: 0%;
-	}
-}
-
-@keyframes enterRight {
-	from {
-		left: -100%;
-	}
-	to {
-		left: 0%;
-	}
-}
-
-@media screen and (max-width: 375px) {
-	.next {
-		right: 0.5rem;
-	}
-}
 
 @media screen and (max-width: 690px) {
-	.background {
-		padding: auto 0;
-	}
-	main > h2 {
-		font-size: 1rem;
-	}
-	main > h3 {
-		font-size: 0.8rem;
-	}
 	.background-container {
 		margin: 0;
 		min-height: 100%;
@@ -217,5 +131,88 @@ main hr {
 		margin: 0;
 		padding: 0;
 		max-width: 800px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.slide>h4 {
+		margin-left: 1rem;
+	}
+}
+
+@media screen and (max-width: 475px) {
+
+	.prev {
+		left: 0.5rem;
+	}
+
+	.next {
+		right: 0.5rem;
+	}
+
+	main h2 {
+		padding: 0;
+		margin-top: 2rem;
+	}
+
+	main hr {
+		margin: 0;
+		margin-left: 0.5rem;
+	}
+}
+
+[data-carrousel-button]:hover,
+[data-carrousel-button]:focus {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+[data-carrousel-button]:focus {
+	outline: 1px solid black;
+}
+
+@keyframes exitLeft {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes exitRight {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes enterLeft {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes enterRight {
+	from {
+		left: -100%;
+	}
+
+	to {
+		left: 0%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.next {
+		right: 0.5rem;
 	}
 }

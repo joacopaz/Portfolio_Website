@@ -56,5 +56,5 @@ document.querySelector('[alt="Github logo"]').addEventListener('click', (evt) =>
 })
 
 document.querySelector(".resume").addEventListener("click", () => {
-	window.location = "./Resources/Joaquin-Paz-Resume.pdf"
+	window.location = "./Resources/Joaquin Paz Resume.pdf"
 })
