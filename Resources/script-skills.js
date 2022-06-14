@@ -41,7 +41,6 @@ skillHeader.addEventListener("focusout", () => {
 	expandSkill.classList.remove("fa-beat-fade");
 });
 skillHeader.addEventListener("click", (evt) => {
-	console.log(evt.target)
 	if (document.querySelector('.skill-header button').dataset.expanded === 'false') {
 		document.querySelector(".all-skills").style.display = "";
 		skillLogo = document.querySelector('.skill-header button i')
