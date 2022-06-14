@@ -51,6 +51,25 @@ main h3 {
 	width: 180px;
 	padding: 0;
 	margin: 1.5rem;
+	caret-color: transparent;
+	cursor: pointer;
+	color: white;
+}
+
+.skill-header h3,
+.roadmap-header h3 {
+	transition: color 200ms;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.skill-header:hover h3,
+.roadmap-header:hover h3 {
+	color: rgba(255, 255, 255, 0.539);
 }
 
 .level article {

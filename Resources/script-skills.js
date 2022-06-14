@@ -9,7 +9,7 @@ $(window).ready(() => {
 	document.querySelector(".expand-button-roadmap").childNodes[0].click()
 	document.querySelector(".expand-button-roadmap").childNodes[0].click()
 	document
-		.querySelector(".expand-button-skill")
+		.querySelector(".skill-header")
 		.addEventListener("click", () => {
 			const bars = document.querySelectorAll('[data-set="false"]');
 			setTimeout(() => {
@@ -25,31 +25,34 @@ $(window).ready(() => {
 		});
 });
 
+const skillHeader = document.querySelector('.skill-header')
 const expandSkill = document.querySelector(".expand-button-skill");
 
-expandSkill.addEventListener("mouseenter", () => {
+skillHeader.addEventListener("mouseenter", () => {
 	expandSkill.classList.add("fa-beat-fade");
 });
-expandSkill.addEventListener("mouseleave", () => {
+skillHeader.addEventListener("mouseleave", () => {
 	expandSkill.classList.remove("fa-beat-fade");
 });
-expandSkill.addEventListener("focusin", () => {
+skillHeader.addEventListener("focusin", () => {
 	expandSkill.classList.add("fa-beat-fade");
 });
-expandSkill.addEventListener("focusout", () => {
+skillHeader.addEventListener("focusout", () => {
 	expandSkill.classList.remove("fa-beat-fade");
 });
-expandSkill.addEventListener("click", (evt) => {
-	if (evt.target.parentNode.dataset.expanded === "false") {
+skillHeader.addEventListener("click", (evt) => {
+	console.log(evt.target)
+	if (document.querySelector('.skill-header button').dataset.expanded === 'false') {
 		document.querySelector(".all-skills").style.display = "";
-		evt.target.classList.remove("fa-square-plus");
-		evt.target.classList.add("fa-circle-minus");
-		evt.target.parentNode.dataset.expanded = "true";
+		skillLogo = document.querySelector('.skill-header button i')
+		skillLogo.classList.remove("fa-square-plus");
+		skillLogo.classList.add("fa-circle-minus");
+		skillLogo.parentNode.dataset.expanded = "true";
 	} else {
 		document.querySelector(".all-skills").style.display = "none";
-		evt.target.classList.remove("fa-circle-minus");
-		evt.target.classList.add("fa-square-plus");
-		evt.target.parentNode.dataset.expanded = "false";
+		skillLogo.classList.remove("fa-circle-minus");
+		skillLogo.classList.add("fa-square-plus");
+		skillLogo.parentNode.dataset.expanded = "false";
 		const bars = document.querySelectorAll('[data-set="true"]');
 		bars.forEach((bar) => {
 			bar.ldBar.set(0);
@@ -57,7 +60,7 @@ expandSkill.addEventListener("click", (evt) => {
 		});
 	}
 });
-expandSkill.addEventListener("keyup", (evt) => {
+skillHeader.addEventListener("keyup", (evt) => {
 	evt.preventDefault();
 	if (evt.keyCode === 32 || evt.keyCode === 13) {
 		const icon = evt.target.childNodes[0];
@@ -65,36 +68,38 @@ expandSkill.addEventListener("keyup", (evt) => {
 	}
 });
 
-const expandRoadmap = document.querySelector(".expand-button-roadmap");
+const roadmapHeader = document.querySelector('.roadmap-header')
+const expandRoadmap = document.querySelector('.expand-button-roadmap');
 
-expandRoadmap.addEventListener("mouseenter", () => {
+roadmapHeader.addEventListener("mouseenter", () => {
 	expandRoadmap.classList.add("fa-beat-fade");
 });
-expandRoadmap.addEventListener("mouseleave", () => {
+roadmapHeader.addEventListener("mouseleave", () => {
 	expandRoadmap.classList.remove("fa-beat-fade");
 });
-expandRoadmap.addEventListener("focusin", () => {
+roadmapHeader.addEventListener("focusin", () => {
 	expandRoadmap.classList.add("fa-beat-fade");
 });
-expandRoadmap.addEventListener("focusout", () => {
+roadmapHeader.addEventListener("focusout", () => {
 	expandRoadmap.classList.remove("fa-beat-fade");
 });
-expandRoadmap.addEventListener("click", (evt) => {
-	if (evt.target.parentNode.dataset.expanded === "false") {
+roadmapHeader.addEventListener("click", (evt) => {
+	if (document.querySelector('.roadmap-header button').dataset.expanded === 'false') {
 		document.querySelector(".roadmap-implementation").style.display = "";
 		document.querySelector(".roadmap > aside").style.display = "";
 		document.querySelector(".roadmap > p").style.display = "";
 		// document.querySelector(".roadmap > h2").style.display = "";
-		evt.target.classList.remove("fa-square-plus");
-		evt.target.classList.add("fa-circle-minus");
-		evt.target.parentNode.dataset.expanded = "true";
+		roadmapLogo = document.querySelector('.roadmap-header button i')
+		roadmapLogo.classList.remove("fa-square-plus");
+		roadmapLogo.classList.add("fa-circle-minus");
+		roadmapLogo.parentNode.dataset.expanded = "true";
 	} else {
 		document.querySelector(".roadmap-implementation").style.display = "none";
 		document.querySelector(".roadmap > aside").style.display = "none";
 		document.querySelector(".roadmap > p").style.display = "none";
-		evt.target.classList.remove("fa-circle-minus");
-		evt.target.classList.add("fa-square-plus");
-		evt.target.parentNode.dataset.expanded = "false";
+		roadmapLogo.classList.remove("fa-circle-minus");
+		roadmapLogo.classList.add("fa-square-plus");
+		roadmapLogo.parentNode.dataset.expanded = "false";
 		const bars = document.querySelectorAll('[data-set="true"]');
 		bars.forEach((bar) => {
 			bar.ldBar.set(0);
@@ -102,7 +107,7 @@ expandRoadmap.addEventListener("click", (evt) => {
 		});
 	}
 });
-expandRoadmap.addEventListener("keyup", (evt) => {
+roadmapHeader.addEventListener("keyup", (evt) => {
 	evt.preventDefault();
 	if (evt.keyCode === 32 || evt.keyCode === 13) {
 		const icon = evt.target.childNodes[0];
