@@ -263,10 +263,21 @@ main h3 {
 	max-width: 320px;
 }
 
+.completed {
+	color: green
+}
+
+.completed-text {
+	color: yellowgreen;
+}
+
+.ongoing {
+	color: orange;
+}
+
 .roadmap-element:nth-child(2) .destination {
 	top: 79%;
 	left: 32%;
-	color: rgb(157, 0, 255);
 }
 
 .roadmap-element:nth-child(2) .tooltip {
@@ -278,6 +289,7 @@ main h3 {
 .roadmap-element:nth-child(3) .destination {
 	top: 56%;
 	left: 26.2%;
+	color: rgb(157, 0, 255);
 }
 
 .roadmap-element:nth-child(3) .tooltip {
