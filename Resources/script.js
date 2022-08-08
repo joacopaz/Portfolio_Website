@@ -36,10 +36,12 @@ animated.forEach((e) => {
 const links = document.querySelectorAll("a");
 links.forEach((e) => {
 	e.addEventListener("click", async (event) => {
+		const tgt = event.target.closest("a").target;
 		const href = event.target.closest("a").href;
 		if (href.includes("#")) return false;
-		if (href.includes("_blank")) {
-			window.open(href, "_blank");
+		if (tgt.includes("_blank")) {
+			e.preventDefault();
+			return window.open(href, "_blank");
 		}
 		event.preventDefault();
 		document.querySelector(".mask").style.opacity = "100%";
@@ -51,10 +53,14 @@ links.forEach((e) => {
 	});
 });
 
-document.querySelector('[alt="Github logo"]').addEventListener('click', (evt) => {
-	window.open(evt.target.dataset.linkTo, '_blank');
-})
+document
+	.querySelector('[alt="Github logo"]')
+	.addEventListener("click", (evt) => {
+		window.open(evt.target.dataset.linkTo, "_blank");
+	});
 
-document.querySelector(".resume").addEventListener("click", () => {
-	window.location = "./Resources/Joaquin Paz Resume.pdf"
-})
+if (document.querySelector(".resume")) {
+	document.querySelector(".resume").addEventListener("click", () => {
+		window.location = "./Resources/Joaquin Paz Resume.pdf";
+	});
+}
