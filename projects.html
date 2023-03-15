@@ -307,27 +307,38 @@
 						</li>
 						<li class="slide" data-active>
 							<h3>Ls Operations Map - React Full-stack App</h3>
-							<img src="./Resources/Project13.png" alt="Mankey App"
+							<img src="./Resources/Project13.gif" alt="LS Ops Map Project"
 								data-project-image="https://ls-ops-map.web.app/" />
 							<h4>Description</h4>
 							<p class="spread">
-								Full-stack React web application using Firebase to manage the back-end.
+								<b>Current project being supported to date.</b> Full-stack React web application using
+								Firebase
+								to manage the Database and Google Cloud
+								Functions with ExpressJS to manage the API and Backend operations.
 							</p>
 							<h4>Objective</h4>
 							<p class="spread">
-								The client requested a web app that managed all the company's channel information with
-								an Authentication system. The requirements were to minimize server costs, allow the
-								dynamic edition of the whole database and an admin dashboard to control
+								The client requested a web app that managed all the company's channels information with
+								an Authentication system, a custom backend API to perform special Admin functions, a
+								Role system, an Admin command overlay, custom DB modelling and the ability to
+								enhance/develop/customize the project without hard coding, just based on Admin roles.
+								The requirements were to
+								minimize server costs, allow the dynamic edition of the whole database and an admin
+								dashboard to control
 								versions/rollback events.
 							</p>
-							<p class="spread">These were achieved using a version-control system, minimizing
-								data-transfer using local storage to cache and only fetch a DB version when a
-								new version came out.</p>
+							<p class="spread">These were achieved using a version-control system (a local stored DB that
+								only read the online DB on a need-to-know basis, only checking if there is a new version
+								of the online one and updating specifically the lines to update, to avoid extra
+								reads/writes and minimize server costs).</p>
+							<p class="spread">The DB allows for custom exports both in Excel (.xlsx) and Google Sheets
+								API, using Google OAuth authentication flow.</p>
 							<h4>Let me see it</h4>
 							<p class="spread">
 								<a href="https://ls-ops-map.web.app/" class="main-link" target="_blank">Of course!</a>
-								Take note that this project contains sensible information. I'm allowed to show it
-								by sharing live screen if interested, but I cannot provide free access or share
+								Take note that this project contains sensitive information. I'm allowed to show it
+								by sharing pictures or sharing live screen if interested, but I cannot provide free
+								access or share
 								credentials.
 							</p>
 							<h4>And the Code?</h4>
