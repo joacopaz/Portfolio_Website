@@ -146,7 +146,7 @@ nav {
 	width: 100%;
 }
 
-.nav>* {
+.nav > * {
 	margin: 0 1rem;
 	text-decoration: none;
 	color: white;
@@ -190,21 +190,21 @@ nav {
 	transition: width 200ms 200ms, left 200ms 200ms;
 }
 
-.nav a:hover:nth-child(1)~.underline {
+.nav a:hover:nth-child(1) ~ .underline {
 	width: 71px;
 }
 
-.nav a:hover:nth-child(2)~.underline {
+.nav a:hover:nth-child(2) ~ .underline {
 	width: 57px;
 	left: 6.35rem;
 }
 
-.nav a:hover:nth-child(3)~.underline {
+.nav a:hover:nth-child(3) ~ .underline {
 	width: 33px;
 	left: 11.99rem;
 }
 
-.nav a:hover:nth-child(4)~.underline {
+.nav a:hover:nth-child(4) ~ .underline {
 	width: 57px;
 	left: 16.3rem;
 }
@@ -426,7 +426,7 @@ footer {
 	transition: opacity 1000ms;
 	border-top: 1px solid rgba(36, 11, 11, 0.331);
 	margin: 0;
-	padding: 0 .5rem;
+	padding: 0 0.5rem;
 }
 
 footer ul {
@@ -544,7 +544,7 @@ img[alt="joacopaz"]:hover {
 	.background {
 		min-height: 100vh;
 		height: 100%;
-		padding: .2rem;
+		padding: 0.2rem;
 	}
 
 	html {
@@ -567,22 +567,22 @@ img[alt="joacopaz"]:hover {
 		margin: 0;
 	}
 
-	.nav a:hover:nth-child(1)~.underline {
+	.nav a:hover:nth-child(1) ~ .underline {
 		width: 71px;
 		left: calc(50% - 10rem);
 	}
 
-	.nav a:hover:nth-child(2)~.underline {
+	.nav a:hover:nth-child(2) ~ .underline {
 		width: 57px;
 		left: calc(50% - 3.4rem);
 	}
 
-	.nav a:hover:nth-child(3)~.underline {
+	.nav a:hover:nth-child(3) ~ .underline {
 		width: 33px;
 		left: calc(50% + 2.2rem);
 	}
 
-	.nav a:hover:nth-child(4)~.underline {
+	.nav a:hover:nth-child(4) ~ .underline {
 		width: 57px;
 		left: calc(50% + 6.3rem);
 	}
@@ -626,7 +626,6 @@ img[alt="joacopaz"]:hover {
 		margin-left: 1rem;
 		margin-right: 1rem;
 		margin-top: 2rem;
-
 	}
 
 	main hr {
@@ -648,14 +647,13 @@ img[alt="joacopaz"]:hover {
 }
 
 @media screen and (max-width: 446px) {
-
 	.background {
 		padding: 0;
 		overflow: hidden;
 	}
 }
 
-@media screen and (max-width:430px) {
+@media screen and (max-width: 430px) {
 	.resume p {
 		flex-direction: column;
 	}
