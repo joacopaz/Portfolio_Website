@@ -56,6 +56,16 @@ main h3 {
 	color: white;
 }
 
+.skill-header h3 {
+	width: fit-content;
+}
+
+.skill-header {
+	padding-left: 0.5rem;
+	justify-content: flex-start;
+	gap: 30px;
+}
+
 .skill-header h3,
 .roadmap-header h3 {
 	transition: color 200ms;
