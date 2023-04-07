@@ -80,7 +80,8 @@ main hr {
 	max-width: fit-content;
 }
 
-.slide > img:hover {
+.slide > img:hover,
+.slide > video:hover {
 	filter: invert(10%);
 }
 
