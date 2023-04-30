@@ -1,5 +1,14 @@
 /* Main */
 
+.background-container {
+	transition: height 200ms linear;
+}
+
+main {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 main hr {
 	margin-bottom: 0.5rem;
 }
@@ -178,6 +187,28 @@ main h3 {
 .disclaimer strong {
 	display: block;
 	font-size: 0.9rem;
+}
+
+.top {
+	color: rgb(150, 91, 218);
+	caret-color: transparent;
+	transition: color 200ms, border 200ms;
+	border: rgb(150, 91, 218) solid;
+	width: fit-content;
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.top:hover {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.67);
+	border-color: rgba(255, 255, 255, 0.67);
 }
 
 /* Road Map */

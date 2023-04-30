@@ -1,7 +1,6 @@
 $(window).ready(() => {
 	if (!mobile)
 		document.querySelectorAll(".expand-button").forEach((button) => {
-			console.log(button);
 			button.childNodes[0].click();
 		});
 
