@@ -61,6 +61,6 @@ document
 
 if (document.querySelector(".resume")) {
 	document.querySelector(".resume").addEventListener("click", () => {
-		window.location = "./Resources/Joaquin Paz Resume.pdf";
+		window.open("./Resources/Joaquin Paz Resume.pdf", "_blank");
 	});
 }
