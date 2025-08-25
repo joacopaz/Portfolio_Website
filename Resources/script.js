@@ -64,3 +64,16 @@ if (document.querySelector(".resume")) {
 		window.open("./Resources/Joaquin Paz Resume.pdf", "_blank");
 	});
 }
+
+if (window.location.href.includes("projects")) {
+	const ALERT_TAG = "alert";
+
+	const hasShownAlert = localStorage.getItem(ALERT_TAG);
+
+	if (!hasShownAlert) {
+		window.alert(
+			"Hi! Apologies for this unexpected prompt.\n\n I haven't had time to update the projects in over two years (too much work hang ups) but everything here is still relevant. I would suggest seeing my Resume and Skills section, both of which I have kept up to date. Regarding github contributions, most are private to the company repositories.\n\nI have made public what I can, you can still see some bug fixing I did in public repos, like Google's AI mediapipe repository, feel free to reach out regarding any of my recent activity.",
+		);
+		localStorage.setItem(ALERT_TAG, "true");
+	}
+}
