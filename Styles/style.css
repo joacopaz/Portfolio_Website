@@ -9,7 +9,7 @@
 body {
 	font-family: "Biotif", sans-serif;
 	position: relative;
-	min-width: 100vw;
+	min-width: 100%;
 	min-height: 100vh;
 	z-index: -2;
 	transition: opacity 500ms;

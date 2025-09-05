@@ -3,7 +3,7 @@ main hr {
 }
 
 main {
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 main h2 {
