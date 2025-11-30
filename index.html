@@ -1,117 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="./Styles/Fonts/bogart.css" />
+    <link rel="stylesheet" href="./Styles/Fonts/biotif.css" />
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Resources/script.js" defer></script>
+    <script src="./Resources/mobile.js" defer></script>
+    <title>Joaquín Paz</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="stylesheet" href="./Styles/Fonts/bogart.css" />
-	<link rel="stylesheet" href="./Styles/Fonts/biotif.css" />
-	<link rel="stylesheet" href="./Styles/style.css" />
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="./Resources/script.js" defer></script>
-	<script src="./Resources/mobile.js" defer></script>
-	<title>Joaquín Paz</title>
-</head>
-
-<body>
-	<div class="background-video">
-		<video id="background-video" data-video autoplay onload="this.play()" loop muted
-			poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80">
-			<source src="./Resources/vid1.mp4" type="video/mp4" />
-		</video>
-	</div>
-	<div class="background-container">
-		<div class="background">
-			<header>
-				<nav>
-					<ul class="nav">
-						<a href="#">
-							<li style="font-weight: bold">About Me</li>
-						</a>
-						<a href="./projects.html">
-							<li>Projects</li>
-						</a>
-						<a href="./skills.html">
-							<li>Skills</li>
-						</a>
-						<a href="./contact.html">
-							<li>Contact</li>
-						</a>
-						<div class="underline"></div>
-					</ul>
-					<a href="#">
-						<h1 class="animated" data-animated>
-							Joaquin Paz
-							<div data-animation>
-								<div class="animation l1" data-animation></div>
-								<div class="animation l2" data-animation></div>
-								<div class="animation l3" data-animation></div>
-								<div class="animation l4" data-animation></div>
-							</div>
-						</h1>
-					</a>
-				</nav>
-			</header>
-			<div class="loader"><img src="./Resources/cog.webp" alt=""></div>
-			<main>
-				<h3 class="animated" data-animated>Hey!<div data-animation>
-						<div class="animation l1" data-animation></div>
-						<div class="animation l2" data-animation></div>
-						<div class="animation l3" data-animation></div>
-						<div class="animation l4" data-animation></div>
-					</div>
-				</h3>
-				<p class="edge-case">My name is Joaquín and I'm a Software Engineer, a problem solver and optimizer. </p>
-				<p class="edge-case second">I'm currently working as a Sr. Software Engineer at
-					Teladoc, the number one Telehealth & Telemedicine Provider in the US.</p>
-				<p>
-					I'm passionate about delivering maximum quality products and continuous innovation. I thrive in engineering efficient systems and strongly believe that with a
-					steady analytical approach anything can be achieved.
-				</p>
-				<p class="spread">Nothing has ever been built without a great team, so I look to surround myself with the best problem solvers and amazing people I can find.</p>
-				<p class="spread">
-					I love wood-working, I'm a former drummer and a learning enthusiast (currently diving into Rust 🦀).
-					If it can be created, I want to learn everything about it!
-				</p>
-				<p class="spread">
-					Feel free to explore the
-					<a href="./projects.html" class="main-link">Projects</a>
-					section to see some samples of what I've been working on, or simply download my Resume below
-				</p>
-				<div class="resume">
-					<span></span>
-					<p>Resume</p>
-					<div class="resume-container">
-						<img src="./Resources/pdf.webp" alt="Resume Download">
-					</div>
-				</div>
-				<div class="image-container"><img src="./Resources/Perfil-profesional.webp" alt="Joaquin's Picture">
-				</div>
-			</main>
-			<footer>
-				<ul>
-					<li>
-						<div class="image-container"><img src="./Resources/logo.webp" alt="joacopaz" data-link-to="#">
-						</div>
-					</li>
-					<li>
-						<div class="image-container"><img src="./Resources/github.webp" alt="Github logo"
-								data-link-to="https://www.github.com/joacopaz/"></div>
-					</li>
-					<li class="copyright">&copy; 2025</li>
-				</ul>
-			</footer>
-		</div>
-	</div>
-	<div class="mask"></div>
-</body>
-
-</html>
-
+  <body>
+    <div class="background-video">
+      <video
+        id="background-video"
+        data-video
+        autoplay
+        onload="this.play()"
+        loop
+        muted
+        poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
+      >
+        <source src="./Resources/vid1.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="background-container">
+      <div class="background">
+        <header>
+          <nav>
+            <ul class="nav">
+              <a href="#">
+                <li style="font-weight: bold">About Me</li>
+              </a>
+              <a href="./projects.html">
+                <li>Projects</li>
+              </a>
+              <a href="./skills.html">
+                <li>Skills</li>
+              </a>
+              <a href="./contact.html">
+                <li>Contact</li>
+              </a>
+              <div class="underline"></div>
+            </ul>
+            <a href="#">
+              <h1 class="animated" data-animated>
+                Joaquin Paz
+                <div data-animation>
+                  <div class="animation l1" data-animation></div>
+                  <div class="animation l2" data-animation></div>
+                  <div class="animation l3" data-animation></div>
+                  <div class="animation l4" data-animation></div>
+                </div>
+              </h1>
+            </a>
+          </nav>
+        </header>
+        <div class="loader"><img src="./Resources/cog.webp" alt="" /></div>
+        <main>
+          <h3 class="animated" data-animated>
+            Hey!
+            <div data-animation>
+              <div class="animation l1" data-animation></div>
+              <div class="animation l2" data-animation></div>
+              <div class="animation l3" data-animation></div>
+              <div class="animation l4" data-animation></div>
+            </div>
+          </h3>
+          <p class="edge-case">
+            My name is Joaquín and I'm a Software Engineer, a problem solver and
+            optimizer.
+          </p>
+          <p class="edge-case second">
+            I'm currently working as a Sr. Software Engineer at Teladoc, the
+            number one Telehealth & Telemedicine Provider in the US.
+          </p>
+          <p>
+            I'm passionate about delivering maximum quality products and
+            continuous innovation. I thrive in engineering efficient systems and
+            strongly believe that with a steady analytical approach anything can
+            be achieved.
+          </p>
+          <p class="spread">
+            Nothing has ever been built without a great team, so I look to
+            surround myself with the best problem solvers and amazing people I
+            can find.
+          </p>
+          <p class="spread">
+            I love wood-working, I'm a former drummer and a learning enthusiast
+            (currently diving into Rust 🦀). If it can be created, I want to
+            learn everything about it!
+          </p>
+          <p class="spread">
+            Feel free to explore the
+            <a href="./projects.html" class="main-link">Projects</a>
+            section to see some samples of what I've been working on, or simply
+            download my Resume below
+          </p>
+          <div class="resume">
+            <span></span>
+            <p>Resume</p>
+            <div class="resume-container">
+              <img src="./Resources/pdf.webp" alt="Resume Download" />
+            </div>
+          </div>
+          <div class="image-container">
+            <img
+              src="./Resources/Perfil-profesional.webp"
+              alt="Joaquin's Picture"
+            />
+          </div>
+        </main>
+        <footer>
+          <ul>
+            <li>
+              <div class="image-container">
+                <img
+                  src="./Resources/logo.webp"
+                  alt="joacopaz"
+                  data-link-to="#"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <img
+                  src="./Resources/github.webp"
+                  alt="Github logo"
+                  data-link-to="https://www.github.com/joacopaz/"
+                />
+              </div>
+            </li>
+            <li class="copyright">&copy; 2025</li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <div class="mask"></div>
+  </body>
 </html>
