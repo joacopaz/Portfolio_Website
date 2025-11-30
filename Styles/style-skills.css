@@ -28,6 +28,7 @@ main h3 {
 /* Skills */
 .all-skills {
 	position: relative;
+	display: none;
 }
 
 .skill-img-container {
@@ -192,7 +193,9 @@ main h3 {
 .top {
 	color: rgb(150, 91, 218);
 	caret-color: transparent;
-	transition: color 200ms, border 200ms;
+	transition:
+		color 200ms,
+		border 200ms;
 	border: rgb(150, 91, 218) solid;
 	width: fit-content;
 	margin: 0 auto;
