@@ -419,7 +419,64 @@
                   >
                 </p>
               </li>
+
               <li class="slide" data-active>
+                <h3>Goggle AI Edge Open Source Contribution</h3>
+                <img
+                  src="./Resources/Project12.png"
+                  alt="Goggle AI-Edge mediapipe open source contribution image"
+                  data-project-image="https://github.com/google-ai-edge/mediapipe/commits/master/?author=joacopaz"
+                />
+                <h4>Description</h4>
+                <p class="spread">
+                  Fixed runtime of mediapipe models (for AI selfie segmentation
+                  detection) running in worker threads for MacOS contexts.
+                  Previously this would cause a crash and render the model
+                  unusable in those contexts.
+                </p>
+                <h4>Objective</h4>
+                <p class="spread">
+                  We needed to run video stream transformers at Teladoc (detect
+                  the Selfie of the user to run background replacement and other
+                  vision tasks), but this a very expensive computation process
+                  to run on the main thread. I suggested moving the
+                  implementation to a worker thread, but we noticed that the
+                  Google AI-Edge mediapipe library had a bug for MacOS contexts.
+                  I cloned their repository, got to the root of the issue and
+                  posted the fix.
+                </p>
+                <p class="spread">
+                  This fixed the issue starting on version
+                  <a
+                    href="https://github.com/google-ai-edge/mediapipe/releases/tag/v0.10.18"
+                    target="_blank"
+                    class="main-link"
+                    style="font-family: arial"
+                    >0.10.18</a
+                  >
+                  and is live to date (you can search "Fix for isIOS() platform
+                  util on worker and non-worker contexts" on the release) or see
+                  the commit
+                  <a
+                    class="main-link"
+                    href="https://github.com/google-ai-edge/mediapipe/commits/master/?author=joacopaz"
+                    target="_blank"
+                    >here</a
+                  >.
+                </p>
+                <h4>Let me see it</h4>
+                <p class="spread">
+                  <a
+                    href="https://github.com/google-ai-edge/mediapipe/commits/master/?author=joacopaz"
+                    class="main-link"
+                    target="_blank"
+                    >See the commit here.</a
+                  >
+                  This is easy to share since it's an open source library.
+                </p>
+              </li>
+
+              <li class="slide">
                 <h3>Ls Operations Map</h3>
                 <video
                   src="./Resources/Project13.mp4"
