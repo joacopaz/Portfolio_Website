@@ -163,7 +163,7 @@ nav {
 }
 
 .nav a:hover {
-  color: rgba(0, 0, 0, 0);
+  color: rgba(255, 180, 255, 1);
 }
 
 @keyframes rainbow {
