@@ -21,7 +21,7 @@ main h3 {
 p.bullet {
 	position: relative;
 }
-/*
+
 p.bullet::before {
 	content: "";
 	position: absolute;
@@ -32,7 +32,7 @@ p.bullet::before {
 	border-radius: 50%;
 	background-color: white;
 }
-*/
+
 [alt="Skills"] {
 	height: 200px;
 	width: 200px;
@@ -510,6 +510,9 @@ p.bullet::before {
 
 	.background {
 		padding: 0;
+	}
+	p.bullet::before {
+		left: 6px;
 	}
 }
 
