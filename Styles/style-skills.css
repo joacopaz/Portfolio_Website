@@ -18,6 +18,21 @@ main h3 {
 	width: 150px;
 }
 
+p.bullet {
+	position: relative;
+}
+
+p.bullet::before {
+	content: "";
+	position: absolute;
+	left: 18px;
+	top: 25px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: white;
+}
+
 [alt="Skills"] {
 	height: 200px;
 	width: 200px;
