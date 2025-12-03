@@ -26,6 +26,7 @@ $(window).ready(() => {
       interval += 500;
     });
   });
+  scrollTo({ top: 0 });
 });
 
 const skillHeader = document.querySelector(".skill-header");
