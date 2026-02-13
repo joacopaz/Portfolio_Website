@@ -1,5 +1,21 @@
 let animating;
 
+function handleSlideVideo(slide, shouldPlay) {
+	const video = slide.querySelector("video");
+	if (!video) return;
+	if (shouldPlay) {
+		if (!video.hasAttribute("src") && video.dataset.src) {
+			video.src = video.dataset.src;
+			video.addEventListener("canplay", () => video.play(), { once: true });
+			video.load();
+		} else {
+			video.play();
+		}
+	} else {
+		video.pause();
+	}
+}
+
 // Event listeners for next and previous buttons
 
 const buttons = document.querySelectorAll("[data-carrousel-button]");
@@ -24,6 +40,8 @@ buttons.forEach((button) => {
 			activeSlide.style.animationName = "exitRight";
 			nextSlide.style.animationName = "enterRight";
 		}
+		handleSlideVideo(activeSlide, false);
+		handleSlideVideo(nextSlide, true);
 		nextSlide.dataset.active = true;
 		delete activeSlide.dataset.active;
 		const slideH = activeSlide.offsetHeight;
@@ -33,6 +51,10 @@ buttons.forEach((button) => {
 		});
 	});
 });
+
+// Load video for the initially active slide
+const initialActive = document.querySelector("[data-slides] [data-active]");
+if (initialActive) handleSlideVideo(initialActive, true);
 
 buttons.forEach((button) => {
 	button.addEventListener("keyup", (e) => {
