@@ -81,12 +81,16 @@
         <div class="loader"><img src="./Resources/cog.webp" alt="" /></div>
         <main>
           <section class="carrousel" data-carrousel>
-            <div class="prev" data-carrousel-button="prev">
-              <i class="fa-solid fa-arrow-left"></i>
+            <div class="carrousel-header">
+              <div class="prev" data-carrousel-button="prev">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <h3 class="active-title" data-active-title></h3>
+              <div class="next" data-carrousel-button="next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
             </div>
-            <div class="next" data-carrousel-button="next">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
+            <div class="carrousel-stage">
             <ul class="slides" data-slides>
               <li class="slide">
                 <h3>Rock, Paper, Scissors!</h3>
@@ -410,6 +414,66 @@
               </li>
 
               <li class="slide" data-active>
+                <h3>Clutch Agents</h3>
+                <video
+                  data-src="./Resources/clutch-demo.webm"
+                  type="video/webm"
+                  alt="Clutch Agents multi-tenant AI agent platform demo"
+                  preload="none"
+                  loop
+                  muted
+                ></video>
+                <h4>Description</h4>
+                <p class="spread">
+                  Multi-tenant AI agent platform built around two parallel
+                  runtime paths. Customers can run each agent as an isolated
+                  container on the platform's own infrastructure, or delegate
+                  the full agent loop to a model provider's managed service.
+                  Both paths sit behind a single normalized contract, so a
+                  hosted Anthropic agent, a hosted OpenAI agent, and a
+                  container-run agent all behave identically to the rest of
+                  the system, and adding a new provider (Meta, others) is a
+                  matter of dropping in an adapter without touching shared
+                  code.
+                </p>
+                <p class="spread">
+                  Each agent runs paired with its own egress proxy, an
+                  isolated persistence volume, and per-agent encryption keys.
+                  Ingress is fronted by a reverse proxy that generates routing
+                  rules dynamically from the fleet database, and network
+                  policies block any agent-to-agent traffic. A React and Node
+                  control plane handles fleet provisioning, customer auth,
+                  integrations, secrets, and live config push to each agent's
+                  filesystem. The whole system is shaped as a multi-agent
+                  orchestration layer for running complex, long-running
+                  workflows under a strict security boundary.
+                </p>
+                <h4>Objective</h4>
+                <p class="spread">
+                  Treat every agent as untrusted. Secrets are injected at
+                  runtime by a host-side dispatcher and never enter the
+                  agent's process, the proxy enforces per-agent domain
+                  allowlists on every outbound call, and customers can wire
+                  over <span style="font-family: Arial">2,000</span> one-click
+                  integrations (Gmail, Slack, Calendars, and the rest) without
+                  exposing credentials to the agent itself. Webhooks support
+                  bring-your-own-API alongside auto-detected signing for
+                  Stripe, Slack, Shopify, GitHub, and Meta from a single
+                  pasted secret.
+                </p>
+                <h4>Let me see it</h4>
+                <p class="spread">
+                  This is a proprietary product and the running platform is
+                  not publicly accessible. Happy to share a live walkthrough
+                  on request.
+                </p>
+                <h4>And the Code?</h4>
+                <p class="spread">
+                  This is a proprietary repository and is not publicly
+                  accessible.
+                </p>
+              </li>
+              <li class="slide">
                 <h3>Context Layer</h3>
                 <video
                   data-src="./Resources/context-layer.mp4"
@@ -904,6 +968,7 @@
                 </p>
               </li>
             </ul>
+            </div>
           </section>
         </main>
         <footer>
