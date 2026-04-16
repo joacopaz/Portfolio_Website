@@ -1,0 +1,9 @@
+/* Landing page only: bound main to 74vh on web view so it stays
+   centered in the viewport and scrolls internally if needed. */
+
+@media screen and (min-width: 690px) {
+	main {
+		height: 74vh;
+		overflow-y: auto;
+	}
+}
