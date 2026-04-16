@@ -426,27 +426,31 @@
                 <h4>Description</h4>
                 <p class="spread">
                   Multi-tenant AI agent platform built around two parallel
-                  runtime paths. Customers can run each agent as an isolated
-                  container on the platform's own infrastructure, or delegate
-                  the full agent loop to a model provider's managed service.
-                  Both paths sit behind a single normalized contract, so a
-                  hosted Anthropic agent, a hosted OpenAI agent, and a
-                  container-run agent all behave identically to the rest of
-                  the system, and adding a new provider (Meta, others) is a
-                  matter of dropping in an adapter without touching shared
-                  code.
+                  runtime paths: an OpenClaw-powered agent that runs on the
+                  platform's own infrastructure, or a remotely hosted agent
+                  that delegates the full agent loop to a provider's managed
+                  service (Anthropic Managed Agents, OpenAI Agents, and
+                  similar offerings). Both paths sit behind a single
+                  normalized contract, so each runtime behaves identically to
+                  the rest of the system, and adding a new provider (Meta,
+                  others) is a matter of dropping in an adapter without
+                  touching shared code.
                 </p>
                 <p class="spread">
                   Each agent runs paired with its own egress proxy, an
                   isolated persistence volume, and per-agent encryption keys.
-                  Ingress is fronted by a reverse proxy that generates routing
-                  rules dynamically from the fleet database, and network
-                  policies block any agent-to-agent traffic. A React and Node
-                  control plane handles fleet provisioning, customer auth,
-                  integrations, secrets, and live config push to each agent's
-                  filesystem. The whole system is shaped as a multi-agent
-                  orchestration layer for running complex, long-running
-                  workflows under a strict security boundary.
+                  The platform takes a security-first approach to ingress and
+                  egress: a reverse proxy generates routing rules from the
+                  fleet database to gate inbound traffic, while every agent
+                  gets an authorized-domain allowlist on the way out plus
+                  domain-scoped credentials, so a prompt injection that
+                  hijacks an agent's intent still cannot leak secrets to an
+                  unintended destination. A React and Node control plane
+                  handles fleet provisioning, customer auth, integrations,
+                  secrets, and live config push to each agent's filesystem.
+                  The whole system is shaped as a multi-agent orchestration
+                  layer for running complex, long-running workflows under a
+                  strict security boundary.
                 </p>
                 <h4>Objective</h4>
                 <p class="spread">
